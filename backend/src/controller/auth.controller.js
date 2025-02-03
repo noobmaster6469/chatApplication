@@ -124,7 +124,7 @@ export const updateProfile = async (req, res) => {
       });
     }
 
-    const uploadResponse = await clouinary.uploader.upload(profilePic);
+    const uploadResponse = await cloudinary.uploader.upload(profilePic);
 
     const updatedUser = await User.findByIdAndUpdate(
       userId,
